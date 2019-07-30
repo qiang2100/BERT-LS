@@ -32,7 +32,7 @@ Suppose that there is a sentence "the cat perched on the mat" and the complex wo
 [BERT-LS technical report](https://arxiv.org/pdf/1907.06226.pdf)
 
 ```
-@article{qiang2018STTP,
+@article{qiang2019BERTLS,
   title =  {A Simple BERT-Based Approach for Lexical Simplification },
   author = {Qiang, Jipeng and 
             Li, Yun and
