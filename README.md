@@ -21,6 +21,9 @@ The project is based on Python 3.5
 
 ## Idea
 
+Suppose that there is a sentence "the cat perched on the mat" and the complex word "perched". We concatenate the original sequence $S$ and $S'$ as a sentence pair, and feed the sentence pair ${S,S'}$ into the BERT to obtain the probability distribution of the vocabulary $p(\cdot|S,S'\backslash \{w\})$ corresponding to the mask word. In this way, the higher probability words in $p(\cdot|S,S'\backslash \{w\})$ corresponding to the mask word not only consider the complex word itself, but also can fit the context of the complex word. Finally, we select as simplification candidates the top 10 words from $p(\cdot|S,S'\backslash \{w\})$, excluding the morphological derivations of $w$. For this example, we can get the top three simplification candidate words "sat, seated, hopped". 
+
+<center style="padding: 40px"><img width="70%" src="https://github.com/qiang2100/BERT-LS/blob/master/BERT_LS.png" /></center>
 
 
 
