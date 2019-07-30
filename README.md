@@ -2,7 +2,7 @@
    Lexical simplification (LS) aims to replace complex words in a given sentence with their simpler alternatives of equivalent meaning. Recently unsupervised lexical simplification approaches only rely on the complex word itself regardless of the given sentence to generate candidate substitutions, which will inevitably produce a large number of spurious candidates. We present a simple BERT-based LS approach that makes use of the pre-trained unsupervised deep bidirectional representations BERT. We feed the given sentence masked the complex word into the masking language model of BERT to generate candidate substitutions. By considering the whole sentence, the generated simpler alternatives are easier to hold cohesion and coherence of a sentence. Experimental results show that our approach obtains obvious improvement on standard LS benchmark.
    
 
-## Third-Party Software
+## Pre-trained models
 
 - [FastText](https://dl.fbaipublicfiles.com/fasttext/vectors-english/crawl300d-2M-subword.zip) (word embeddings trained using FastText)
 - [BERT based on Pytroch](https://github.com/huggingface/pytorch-transformers)
@@ -19,5 +19,22 @@ The project is based on Python 3.5
 
 (4) run "./run_LS_BERT.sh".
 
+
+
+## Citation
+
+[BERT-LS technical report](https://arxiv.org/pdf/1907.06226.pdf)
+
+```
+@article{qiang2018STTP,
+  title =  {A Simple BERT-Based Approach for Lexical Simplification },
+  author = {Qiang, Jipeng and 
+            Li, Yun and
+            Yi, Zhu and
+            Yuan, Yunhao and 
+            Wu, Xindong},
+  journal = {arXiv preprint arXiv:1907.06226},
+  year  =  {2019}
+}
 
 
