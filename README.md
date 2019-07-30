@@ -11,13 +11,16 @@
 
 The project is based on Python 3.5
 
-(1) Download the code of BERT based on Pytorch. In our experiments, we adopted pretrined [BERT-Large, Uncased (Whole Word Masking)](https://storage.googleapis.com/bert_models/2019_05_30/wwm_uncased_L-24_H-1024_A-16.zip).
+(1) Download the code of BERT based on Pytorch. In our experiments, we adopted pretrained [BERT-Large, Uncased (Whole Word Masking)](https://storage.googleapis.com/bert_models/2019_05_30/wwm_uncased_L-24_H-1024_A-16.zip).
 
 (2) Copy the files provided by the project into the main file of BERT
 
 (3) download the pre-trained word embeddings using FastText.
 
 (4) run "./run_LS_BERT.sh".
+
+## Idea
+
 
 
 
