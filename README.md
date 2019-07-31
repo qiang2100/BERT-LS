@@ -9,11 +9,11 @@
 
 ## How to run this code
 
-The project is based on Python 3.5
+We recommend Python 3.6 or higher. The model is implemented with PyTorch 1.0.1 using [pytorch-transformers v1.0.0](https://github.com/huggingface/pytorch-transformers). 
 
 (1) Download the code of BERT based on Pytorch. In our experiments, we adopted pretrained [BERT-Large, Uncased (Whole Word Masking)](https://storage.googleapis.com/bert_models/2019_05_30/wwm_uncased_L-24_H-1024_A-16.zip).
 
-(2) Copy the files provided by the project into the main file of BERT
+(2) Copy the files provided by the project into the main file of BERT.
 
 (3) download the pre-trained word embeddings using FastText.
 
