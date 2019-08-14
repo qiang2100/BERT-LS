@@ -158,16 +158,21 @@ def convert_whole_word_to_feature(tokens_a, mask_position, seq_length, tokenizer
 
 
     true_word = ''
-    ind = 0
-    for pos in  mask_position:
-        true_word = true_word + tokens[pos]
-        if(ind ==0):
+    index = 0
+    count = 0
+    mask_position_length = len(mask_position)
+
+    while count in range(mask_position_length):
+        index = mask_position_length - 1 - count
+
+        pos = mask_position[index]
+        if index == 0:
             tokens[pos] = '[MASK]'
         else:
             del tokens[pos]
             del input_type_ids[pos]
-        ind = ind + 1
 
+        count += 1
 
     input_ids = tokenizer.convert_tokens_to_ids(tokens)
 
