@@ -4,7 +4,7 @@
 
 ## Pre-trained models
 
-- [FastText](https://dl.fbaipublicfiles.com/fasttext/vectors-english/crawl300d-2M-subword.zip) (word embeddings trained using FastText)
+- [FastText](https://dl.fbaipublicfiles.com/fasttext/vectors-english/crawl-300d-2M-subword.zip) (word embeddings trained using FastText)
 - [BERT based on Pytroch](https://github.com/huggingface/pytorch-transformers)
 
 ## How to run this code
