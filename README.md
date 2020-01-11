@@ -40,14 +40,14 @@ Comparison of simplification candidates of complex words using three methods. Gi
 
 ```
 @article{qiang2019BERTLS,
-  title =  {A Simple BERT-Based Approach for Lexical Simplification },
+  title =  {Lexical Simplification with Pretrained Encoders },
   author = {Qiang, Jipeng and 
             Li, Yun and
             Yi, Zhu and
             Yuan, Yunhao and 
             Wu, Xindong},
-  journal = {arXiv preprint arXiv:1907.06226},
-  year  =  {2019}
+  journal = {AAAI},
+  year  =  {2020}
 }
 
 
