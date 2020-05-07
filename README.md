@@ -14,9 +14,9 @@ We recommend Python 3.5 or higher. The model is implemented with PyTorch 1.0.1 u
 
 (1) Download pretrianed BERT. In our experiments, we adopted pretrained [BERT-Large, Uncased (Whole Word Masking)](https://storage.googleapis.com/bert_models/2019_05_30/wwm_uncased_L-24_H-1024_A-16.zip).
 
-(3) download the pre-trained word embeddings using FastText.
+(2) download the pre-trained word embeddings using FastText.
 
-(4) run "./run_LS_BERT.sh".
+(3) run "./run_LS_BERT.sh".
 
 ## Idea
 
