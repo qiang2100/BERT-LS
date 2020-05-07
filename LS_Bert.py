@@ -25,7 +25,6 @@ from sklearn.metrics.pairwise import cosine_similarity as cosine
 import numpy as np
 import torch
 import nltk
-from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 
 from collections import defaultdict
