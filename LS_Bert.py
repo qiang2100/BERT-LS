@@ -416,27 +416,54 @@ def substitution_selection(source_word, pre_tokens, pre_scores, ps, num_selectio
 
     return cur_tokens
 
+def cross_entropy_word(X,i,pos):
+    
+    #print(X)
+    #print(X[0,2,3])
+    X = softmax(X,axis=1)
+    loss = 0
+    loss -= np.log10(X[i,pos])
+    return loss
+
+
 def get_score(sentence,tokenizer,maskedLM):
     tokenize_input = tokenizer.tokenize(sentence)
-    tensor_input = torch.tensor([tokenizer.convert_tokens_to_ids(tokenize_input)])
-    tensor_input = tensor_input.to('cuda')
+
+    len_sen = len(tokenize_input)
+
+    START_TOKEN = '[CLS]'
+    SEPARATOR_TOKEN = '[SEP]'
+
+    tokenize_input.insert(0, START_TOKEN)
+    tokenize_input.append(SEPARATOR_TOKEN)
+
+    input_ids = tokenizer.convert_tokens_to_ids(tokenize_input)
+
+    #tensor_input = torch.tensor([tokenizer.convert_tokens_to_ids(tokenize_input)])
+    #print("tensor_input")
+    #print(tensor_input)
+    #tensor_input = tensor_input.to('cuda')
     sentence_loss = 0
     
-    
     for i,word in enumerate(tokenize_input):
+
+        if(word == START_TOKEN or word==SEPARATOR_TOKEN):
+            continue
+
         orignial_word = tokenize_input[i]
         tokenize_input[i] = '[MASK]'
         #print(tokenize_input)
         mask_input = torch.tensor([tokenizer.convert_tokens_to_ids(tokenize_input)])
+        #print(mask_input)
         mask_input = mask_input.to('cuda')
         with torch.no_grad():
-            word_loss=maskedLM(mask_input,masked_lm_labels=tensor_input).data.cpu().numpy()
+            att, pre_word =maskedLM(mask_input)
+        word_loss = cross_entropy_word(pre_word[0].cpu().numpy(),i,input_ids[i])
         sentence_loss += word_loss
+        #print(word_loss)
         tokenize_input[i] = orignial_word
         
-    
-    
-    return np.exp(sentence_loss/len(tokenize_input))
+    return np.exp(sentence_loss/len_sen)
 
 
 def LM_score(source_word,source_context,substitution_selection,tokenizer,maskedLM):
