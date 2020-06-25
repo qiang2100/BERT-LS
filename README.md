@@ -24,8 +24,9 @@ We recommend Python 3.5 or higher. The model is implemented with PyTorch 1.0.1 u
 
 (4) Download an English paraphrase database ([PPDB](http://paraphrase.org/#/download)) 
 
-(5) Download an pretrained sequence labeling task to identify complex word . 
+(5) Download an pretrained sequence labeling task to [identify complex word ](https://github.com/siangooding/lexical_simplification/blob/master/gpu_attention.model). 
 
+(6) run "./run_LSBert2.sh".
 ### run LSBert2.0 to simplify one sentence
 
 ## Idea
