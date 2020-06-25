@@ -29,6 +29,8 @@ We recommend Python 3.5 or higher. The model is implemented with PyTorch 1.0.1 u
 (6) run "./run_LSBert2.sh".
 ### run LSBert2.0 to simplify one sentence
 
+(7) run "./run_LSBert_TS.sh": Iteratively call LSBert2.0 to simplify one sentence
+
 ## Idea
 
 Suppose that there is a sentence "the cat perched on the mat" and the complex word "perched". We concatenate the original sequence S and S' as a sentence pair, and feed the sentence pair {S,S'} into the BERT to obtain the probability distribution of the vocabulary corresponding to the mask word. Finally, we select as simplification candidates the top words from the probability distribution, excluding the morphological derivations of the complex word. For this example, we can get the top three simplification candidate words "sat, seated, hopped". 
