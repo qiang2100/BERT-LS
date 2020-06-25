@@ -16,11 +16,11 @@ We recommend Python 3.5 or higher. The model is implemented with PyTorch 1.0.1 u
 
 (2) Download the pre-trained word embeddings using [FastText](https://dl.fbaipublicfiles.com/fasttext/vectors-english/crawl-300d-2M-subword.zip).
 
-### run LSBert1.0 published in AAAI 2020
+### run LSBert1.0 published in [AAAI2020](https://arxiv.org/abs/1907.06226)
 
 (3) run "./run_LSBert1.sh".
 
-### run LSBert2.0
+### run LSBert2.0 published in [arXiv]()
 
 (4) Download an English paraphrase database ([PPDB](http://paraphrase.org/#/download)) 
 
