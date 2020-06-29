@@ -20,11 +20,11 @@ We recommend Python 3.5 or higher. The model is implemented with PyTorch 1.0.1 u
 
 (3) run "./run_LSBert1.sh".
 
-### run LSBert2.0 published in [arXiv]()
+### run LSBert2.0 published in [arXiv](https://arxiv.org/abs/2006.14939)
 
-(4) Download an English paraphrase database ([PPDB](http://paraphrase.org/#/download)) 
+(4) Download an English paraphrase database ([PPDB](http://paraphrase.org/#/download)) , and assign the path of PPDB in the ".sh" file.
 
-(5) Download an pretrained sequence labeling task to [identify complex word ](https://github.com/siangooding/lexical_simplification/blob/master/gpu_attention.model). 
+(5) Download an pretrained sequence labeling task to [identify complex word ](https://github.com/siangooding/lexical_simplification/blob/master/gpu_attention.model), and put the into the main directory of code.
 
 (6) run "./run_LSBert2.sh".
 ### run LSBert2.0 to simplify one sentence
