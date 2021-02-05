@@ -50,14 +50,15 @@ Comparison of simplification candidates of complex words using three methods. Gi
 [BERT-LS technical report](https://arxiv.org/pdf/1907.06226.pdf)
 
 ```
-@article{qiang2019BERTLS,
+@article{qiang2020BERTLS,
   title =  {Lexical Simplification with Pretrained Encoders },
   author = {Qiang, Jipeng and 
             Li, Yun and
             Yi, Zhu and
             Yuan, Yunhao and 
             Wu, Xindong},
-  journal = {AAAI},
+  journal={Thirty-Fourth AAAI Conference on Artificial Intelligence},
+  pages={8649–8656},
   year  =  {2020}
 }
 
